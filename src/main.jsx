@@ -11,6 +11,7 @@ import AuthProvider from "./components/AuthProvider/AuthProvider";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ErrorPage from "./components/Error/ErrorPage";
+import EstateDetails from "./components/EstateDetails/EstateDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/estate-details/:id",
+        element: <PrivateRoute>
+          <EstateDetails></EstateDetails>
+        </PrivateRoute>,
+        loader: ()=>fetch('/residentialData.json'),
       },
       {
         path: "/update-profile",

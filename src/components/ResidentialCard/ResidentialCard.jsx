@@ -1,7 +1,24 @@
-import { useState } from "react";
+import { useContext } from "react";
+import PropTypes from "prop-types"; // ES6
+
+import "../ResidentialCard/Button.css";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { NavLink } from "react-router-dom";
 
 const ResidentialCard = ({ residential }) => {
-  const { image, segment, status, price, location, description, facilities, area } = residential;
+  const { user } = useContext(AuthContext);
+
+  const {
+    id,
+    image,
+    segment,
+    status,
+    price,
+    location,
+    description,
+    facilities,
+    area,
+  } = residential;
 
   return (
     <div className="border rounded-2xl p-8 ">
@@ -35,15 +52,13 @@ const ResidentialCard = ({ residential }) => {
       <div>
         {" "}
         <h2 className="  font-semibold">{location}</h2>
-        <p className="text-sm dark:text-gray-600">
-         {description}
-        </p>
+        <p className="text-sm dark:text-gray-600">{description}</p>
       </div>
 
       {/*  */}
       <div className="p-6 space-y-2">
         <span className="text-xs dark:text-gray-600 flex lg:text-base lg:font-medium text-[#23BE0A]">
-        <div className="py-2">
+          <div className="py-2">
             <ul className="list-disc text-[#878787] text-lg font-normal">
               {facilities.map((facility, index) => (
                 <li key={index}>{facility}</li>
@@ -61,8 +76,36 @@ const ResidentialCard = ({ residential }) => {
           <p className="flex  items-center justify-between gap-2"></p>
         </div>
       </div>
+
+      {user ? (
+        <NavLink to={`/estate-details/${id}`}>
+          
+          <button className="glow-on-hover font-bold" type="button">
+            View Details{" "}
+          </button>
+        </NavLink>
+      ) : (
+        <NavLink to="/login">
+          
+          <button className="glow-on-hover font-bold" type="button">
+            View Details{" "}
+          </button>
+        </NavLink>
+      )}
     </div>
   );
+};
+
+ResidentialCard.propTypes = {
+  residential: PropTypes.node,
+  image: PropTypes.node,
+  segment: PropTypes.node,
+  status: PropTypes.node,
+  price: PropTypes.node,
+  location: PropTypes.node,
+  description: PropTypes.node,
+  facilities: PropTypes.node,
+  area: PropTypes.node,
 };
 
 export default ResidentialCard;
