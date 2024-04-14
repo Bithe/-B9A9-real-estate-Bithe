@@ -1,0 +1,81 @@
+[
+    {
+    "id": 1,
+    "segment": "Single-family homes",
+    "estate_title": "Cozy Family Home",
+    "description": "Charming single-family home perfect for families, featuring a spacious backyard and modern amenities.",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "Suburban neighborhood, City Y",
+    "facilities": ["spacious backyard", "modern kitchen", "home office", "garage", "garden", "play area"],
+    "image": "https://i.ibb.co/9TwG7Ck/lancia-homes-reasons-why-millennials-prefer-single-family-homes-image1.jpg"
+  },
+
+
+  {
+    "id": 2,
+    "segment": "Townhouses",
+    "estate_title": "Modern Townhouse",
+    "description": "Sleek and contemporary townhouse offering urban living with convenience and style.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Downtown area, City Z",
+    "facilities": ["modern design", "urban living"],
+    "image": "https://i.ibb.co/FXvSB19/images.png"
+  },
+
+  {
+    "id": 3,
+    "segment": "Apartments",
+    "estate_title": "Luxury City Apartment",
+    "description": "Luxurious apartment in the heart of the city, boasting breathtaking skyline views and premium amenities.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "City center, Metropolitan City",
+    "facilities": ["skyline views", "premium amenities"],
+    "image": "https://example.com/image3.jpg"
+  },
+  {
+    "id": 4,
+    "segment": "Student housing",
+    "estate_title": "Student Community Residence",
+    "description": "Vibrant student community residence offering comfortable living spaces and proximity to educational institutions.",
+    "price": "$300 per month",
+    "status": "rent",
+    "area": "Shared accommodations",
+    "location": "University campus area, College Town",
+    "facilities": ["community spaces", "proximity to universities"],
+    "image": "https://example.com/image4.jpg"
+  },
+  {
+    "id": 5,
+    "segment": "Senior living communities",
+    "estate_title": "Retirement Retreat",
+    "description": "Tranquil retirement retreat for seniors, featuring serene surroundings and tailored amenities for a comfortable lifestyle.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "2200 sq ft",
+    "location": "Scenic countryside, Retirement County",
+    "facilities": ["serene surroundings", "tailored amenities"],
+    "image": "https://example.com/image5.jpg"
+  },
+  {
+    "id": 6,
+    "segment": "Vacation rentals",
+    "estate_title": "Seaside Villa",
+    "description": "Exquisite seaside villa offering a luxurious retreat with stunning ocean views and private beach access.",
+    "price": "$1000 per night",
+    "status": "rent",
+    "area": "3000 sq ft",
+    "location": "Coastal paradise, Beach Town",
+    "facilities": ["ocean views", "private beach access"],
+    "image": "https://example.com/image6.jpg"
+  }
+    
+
+]
+  
+  
