@@ -54,16 +54,7 @@ const Navbar = () => {
                 Update Profile{" "}
               </NavLink>
 
-              <NavLink
-                to="/user-profile"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                    : ""
-                }
-              >
-                User profile
-              </NavLink>
+          
 
               <NavLink
                 to="/feedback"

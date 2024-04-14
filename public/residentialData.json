@@ -22,7 +22,7 @@
     "status": "sale",
     "area": "1800 sq ft",
     "location": "Downtown area, City Z",
-    "facilities": ["modern design", "urban living"],
+    "facilities": ["rooftop terrace", "fitness center", "community pool", "private balcony", "smart home features", "security system"],
     "image": "https://i.ibb.co/FXvSB19/images.png"
   },
 
@@ -35,7 +35,7 @@
     "status": "sale",
     "area": "1500 sq ft",
     "location": "City center, Metropolitan City",
-    "facilities": ["skyline views", "premium amenities"],
+    "facilities": ["rooftop pool", "gymnasium", "sauna", "concierge service", "business center", "pet-friendly"],
     "image": "https://i.ibb.co/m6hcPK1/images.jpg"
   },
   {
@@ -47,7 +47,7 @@
     "status": "rent",
     "area": "Shared accommodations",
     "location": "University campus area, College Town",
-    "facilities": ["community spaces", "proximity to universities"],
+    "facilities": ["study lounge", "game room", "fitness center", "laundry facilities", "bike storage", "24/7 security"],
     "image": "https://i.ibb.co/47PKHFP/images.jpg"
   },
   {
@@ -59,7 +59,7 @@
     "status": "sale",
     "area": "2200 sq ft",
     "location": "Scenic countryside, Retirement County",
-    "facilities": ["serene surroundings", "tailored amenities"],
+    "facilities": ["walking trails", "clubhouse", "wellness center", "restaurant-style dining", "scheduled transportation", "pet-friendly"],
     "image": "https://i.ibb.co/Y30kCkm/images.jpg"
   },
   {
@@ -71,7 +71,7 @@
     "status": "rent",
     "area": "3000 sq ft",
     "location": "Coastal paradise, Beach Town",
-    "facilities": ["ocean views", "private beach access"],
+    "facilities": ["infinity pool", "hot tub", "private chef", "beachfront access", "outdoor dining area", "entertainment room"],
     "image": "https://i.ibb.co/TbgpBgT/077e0e4b.jpg"
   }
     
