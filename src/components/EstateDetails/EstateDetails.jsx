@@ -162,9 +162,10 @@ const EstateDetails = () => {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-medium leading-6 text-gray-900">
-                        Facilities: 
+                        Facilities:
                       </h4>
                     </div>
+                    <div className="text-lg font-medium leading-6 text-gray-900 text-center items-center flex justify-center ">{facilities.join(", ")}</div>
                   </div>
                 </div>
               </div>

@@ -43,40 +43,37 @@ const Navbar = () => {
                 Home
               </NavLink>
 
-              <NavLink
-                to="/update-profile"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                    : ""
-                }
-              >
-                Update Profile{" "}
-              </NavLink>
+                {/* PROTECTIVE ROUTE */}
+            {user && (
+              <div className=" flex flex-col lg: justify-center items-center gap-8">
+                <NavLink
+                  to="/update-profile"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                      : ""
+                  }
+                >
+                  Update Profile
+                </NavLink>
+
+                <NavLink
+                  to="/special-offer"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                      : ""
+                  }
+                >
+                  Special offer
+                </NavLink>
+              </div>
+            )}
+
 
           
 
-              <NavLink
-                to="/feedback"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                    : ""
-                }
-              >
-                Feedback
-              </NavLink>
-
-              <NavLink
-                to="/subscribe"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                    : ""
-                }
-              >
-                Subscribe
-              </NavLink>
+          
             </ul>
           </div>
           <a className=" lg:text-3xl font-bold ">Hoas</a>
@@ -96,41 +93,31 @@ const Navbar = () => {
 
             {/* PROTECTIVE ROUTE */}
             {user && (
-              <NavLink
-                to="/update-profile"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                    : ""
-                }
-              >
-                Update Profile
-              </NavLink>
+              <div className=" flex justify-center items-center gap-8">
+                <NavLink
+                  to="/update-profile"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                      : ""
+                  }
+                >
+                  Update Profile
+                </NavLink>
+
+                <NavLink
+                  to="/special-offer"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                      : ""
+                  }
+                >
+                  Special offer
+                </NavLink>
+              </div>
             )}
-            {/*  */}
-    
 
-            <NavLink
-              to="/feedback"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                  : ""
-              }
-            >
-              Feedback
-            </NavLink>
-
-            <NavLink
-              to="/subscribe"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                  : ""
-              }
-            >
-              Subscribe
-            </NavLink>
           </ul>
         </div>
         <div className="navbar-end lg:gap-8">
@@ -146,7 +133,10 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src={user?.photoURL || "https://i.ibb.co/Zx54ws3/3dc7c8b92797cd36c8cf431401fc5daf.jpg"}
+                      src={
+                        user?.photoURL ||
+                        "https://i.ibb.co/Zx54ws3/3dc7c8b92797cd36c8cf431401fc5daf.jpg"
+                      }
                     />
                   </div>
                 </div>
@@ -157,9 +147,11 @@ const Navbar = () => {
                   <li>
                     <a className="justify-between">{user.displayName}</a>
                   </li>
-                 
+
                   <li>
-                    <NavLink onClick={logout} to='/login'>Logout</NavLink>
+                    <NavLink onClick={logout} to="/login">
+                      Logout
+                    </NavLink>
                   </li>
                 </ul>
               </div>

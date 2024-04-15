@@ -12,6 +12,7 @@ import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ErrorPage from "./components/Error/ErrorPage";
 import EstateDetails from "./components/EstateDetails/EstateDetails";
+import SpecialOffers from "./components/SpecialOffers/SpecialOffers";
 
 const router = createBrowserRouter([
   {
@@ -25,18 +26,30 @@ const router = createBrowserRouter([
       },
       {
         path: "/estate-details/:id",
-        element: <PrivateRoute>
-          <EstateDetails></EstateDetails>
-        </PrivateRoute>,
-        loader: ()=>fetch('/residentialData.json'),
+        element: (
+          <PrivateRoute>
+            <EstateDetails></EstateDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/residentialData.json"),
       },
       {
         path: "/update-profile",
-        element: <PrivateRoute>
-          <UpdateProfile></UpdateProfile>
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
-  
+      {
+        path: "/special-offer",
+        element: (
+          <PrivateRoute>
+            <SpecialOffers></SpecialOffers>{" "}
+          </PrivateRoute>
+        ),
+      },
+
       {
         path: "/login",
         element: <Login></Login>,
