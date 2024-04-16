@@ -67,7 +67,7 @@ const Navbar = () => {
                   >
                     Terms of Service
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     to="/contact"
                     className={({ isActive }) =>
                       isActive
@@ -76,7 +76,7 @@ const Navbar = () => {
                     }
                   >
                     Contact
-                  </NavLink>
+                  </NavLink> */}
                 </div>
               )}
             </ul>
@@ -121,7 +121,7 @@ const Navbar = () => {
                   Terms of Service
                 </NavLink>
 
-                <NavLink
+                {/* <NavLink
                     to="/contact"
                     className={({ isActive }) =>
                       isActive
@@ -130,7 +130,7 @@ const Navbar = () => {
                     }
                   >
                     Contact{" "}
-                  </NavLink>
+                  </NavLink> */}
               </div>
             )}
           </ul>

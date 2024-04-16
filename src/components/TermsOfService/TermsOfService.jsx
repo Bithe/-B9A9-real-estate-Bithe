@@ -4,7 +4,7 @@ const TermsOfService = () => {
   return (
     <div className="container mx-auto lg:px-20 lg:py-">
       <Helmet>
-        <title>Hoas | Sepcial Offers</title>
+        <title>Hoas | Terms of Service</title>
       </Helmet>
       <div className="-mx-4 flex flex-wrap p-8 ">
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">

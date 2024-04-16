@@ -6,7 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 const Register = () => {
   const { registerUser, setUser } = useContext(AuthContext);
@@ -16,6 +17,9 @@ const Register = () => {
   // FOR ERROR
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+
+  // FOR SHOW PASSWORD
+  const [showPassword, setShowPassword] = useState(false);
 
   //   NAVIGATION
   const navigate = useNavigate();
@@ -76,11 +80,10 @@ const Register = () => {
   return (
     <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
       <div className="container h-full p-10">
-
-      <Helmet>
+        <Helmet>
           <title>Hoas | Register</title>
-         </Helmet>
-        
+        </Helmet>
+
         <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
           <div className="w-full">
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
@@ -143,19 +146,26 @@ const Register = () => {
                         />
                       </div>
 
-                      <div
-                        className="relative mb-6"
-                        data-twe-input-wrapper-init
-                      >
+                      <div className="relative" data-twe-input-wrapper-init>
                         Password:{" "}
-                        <input
-                          type="password"
-                          name="password"
-                          required
-                          className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
-                          id="exampleFormControlInput22"
-                          placeholder="Password"
-                        />
+                        <div className="relative ">
+                          <input
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            required
+                            className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear dark:text-white dark:autofill:shadow-autofill"
+                            id="exampleFormControlInput22"
+                            placeholder="Password"
+                            style={{ paddingRight: "2.5rem" }}
+                          />
+                          {/* SHOW PASSWORD ICON */}
+                          <span
+                            className="absolute inset-y-0 right-0 flex px-2 items-center justify-end "
+                            onClick={() => setShowPassword(!showPassword)}
+                          >
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
+                          </span>
+                        </div>
                       </div>
 
                       {/*  */}

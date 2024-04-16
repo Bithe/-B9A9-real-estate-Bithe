@@ -85,7 +85,7 @@ const Login = () => {
                       <div className="text-center">
                         <img
                           className="mx-auto w-48"
-                          src="/public/login.png"
+                          src="/login.png"
                           alt="logo"
                         />
                         <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
@@ -109,7 +109,11 @@ const Login = () => {
                             placeholder="Email address"
                             {...register("email", { required: true })}
                           />
-                          {errors.email && <span>Email </span>}
+                          {errors.email && (
+                            <span className="text-red-500 font-bold ">
+                              Please give a valid email
+                            </span>
+                          )}
                         </div>
 
                         <div
@@ -125,6 +129,11 @@ const Login = () => {
                             placeholder="Password"
                             {...register("password", { required: true })}
                           />
+                          {errors.password && (
+                            <span className="text-red-500 font-bold ">
+                              Please give a valid password
+                            </span>
+                          )}
                         </div>
 
                         <div className="mb-12 pb-1 pt-1 text-center">
@@ -180,7 +189,9 @@ const Login = () => {
                         preferences seamlessly.
                       </h4>
                       <p className="text-sm">
-                      Keep track of your favorite listings and preferences for quick access. Get Special Offers after login to our site.
+                        Keep track of your favorite listings and preferences for
+                        quick access. Get Special Offers after login to our
+                        site.
                       </p>
                     </div>
                   </div>
