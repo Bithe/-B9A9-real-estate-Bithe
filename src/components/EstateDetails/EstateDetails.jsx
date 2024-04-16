@@ -54,7 +54,7 @@ const EstateDetails = () => {
               <img
                 className="object-cover object-center rounded"
                 alt="hero"
-                src="../../../public/detailsBanner.jpg"
+                src="https://i.ibb.co/7RZ6sBT/details-Banner.jpg"
               ></img>
             </div>
           </div>

@@ -24,7 +24,7 @@ Welcome to Hoas - your go-to residential website for finding the perfect home, u
 We welcome contributions from the community! Feel free to submit bug reports, feature requests, or even pull requests to help improve the Hoas website for everyone.
 
 ## Site URL
-Visit the Hoas Residential Website [here](hoas-residential.web.app).
+Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
 
 
 
