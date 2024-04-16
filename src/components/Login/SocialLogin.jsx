@@ -25,10 +25,10 @@ const SocialLogin = () => {
   };
 
   return (
-    <div className="lg:flex justify-around py-8 ">
+    <div className="flex justify-around py-8 ">
       <button
         onClick={() => handleSocialLogin(googleLogin)}
-        className="btn bg-black text-white"
+        className="btn bg-[#742437] text-white"
       >
         {" "}
         Google Login

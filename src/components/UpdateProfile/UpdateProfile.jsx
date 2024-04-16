@@ -2,14 +2,14 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
+
 
 const UpdateProfile = () => {
   const { user, setReload } = useContext(AuthContext);
 
- 
-
   const handleUpdateProfile = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const name = e.target.name.value;
     const photoURL = e.target.photoURL.value;
@@ -32,6 +32,10 @@ const UpdateProfile = () => {
       className="max-w-sm mx-auto border rounded-xl p-8 m-8"
     >
       <div className="mb-5">
+
+      <Helmet>
+          <title>Hoas | Update Profile</title>
+         </Helmet>
         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
           Your Email: {user.email}
         </label>

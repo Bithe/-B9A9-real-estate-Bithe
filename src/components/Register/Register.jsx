@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Register = () => {
   const { registerUser, setUser } = useContext(AuthContext);
@@ -74,6 +76,11 @@ const Register = () => {
   return (
     <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
       <div className="container h-full p-10">
+
+      <Helmet>
+          <title>Hoas | Register</title>
+         </Helmet>
+        
         <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
           <div className="w-full">
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
@@ -156,7 +163,7 @@ const Register = () => {
                       <div className="text-center lg:text-left">
                         <button
                           type="submit"
-                          className="btn inline-block w-full rounded bg-primary px-7 pb-2 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                          className="btn inline-block w-full rounded bg-primary px-7 pb-2 pt-3 text-xl font-bold uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                           style={{
                             background:
                               "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
@@ -183,7 +190,7 @@ const Register = () => {
                           <NavLink to="/login">
                             <button
                               type="button"
-                              className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
+                              className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xl font-bold uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
                               data-twe-ripple-init
                               data-twe-ripple-color="light"
                             >

@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import "./EstateBanner.css";
 
 const EstateDetails = () => {
   const estateDetails = useLoaderData();
@@ -23,7 +24,44 @@ const EstateDetails = () => {
 
   return (
     <section>
-      <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center md:px-10 lg:px-32 text-gray-50  ">
+      <div className="container flex flex-col items-center px-4 pb-24 mx-auto text-center md:px-10 lg:px-32 text-gray-50  ">
+        {/* BANNER */}
+        <section className="text-gray-600 body-font bg-white dark:bg-slate-900 border w-full rounded-xl px-10 my-4">
+          <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
+            <div className="lg:flex-grow mt-5 md:mt-0  md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+              <h1 className="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+              Start Your Journey Today
+              </h1>
+              <p className="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed dark:text-gray-300">
+              Discover the perfect place to call home with our extensive selection of residential properties. <br /> From cozy apartments to spacious family houses, find your ideal living space with us.
+              </p>
+              <div className="flex justify-center">
+                <a
+                  href="#"
+                  className="inline-flex text-white bg-[#b44593] border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg"
+                >
+                  Start Exploring
+                </a>
+                <a
+                  href="#"
+                  className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+                >
+                  Read articles
+                </a>
+              </div>
+            </div>
+            <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
+              <img
+                className="object-cover object-center rounded"
+                alt="hero"
+                src="../../../public/detailsBanner.jpg"
+              ></img>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILS */}
+
         <section className="bg-gray-100 text-gray-800 border rounded-lg py-8">
           <div className="container max-w-xl mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
             <div>
@@ -165,7 +203,9 @@ const EstateDetails = () => {
                         Facilities:
                       </h4>
                     </div>
-                    <div className="text-lg font-medium leading-6 text-gray-900 text-center items-center flex justify-center ">{facilities.join(", ")}</div>
+                    <div className="text-lg font-medium leading-6 text-gray-900 text-center items-center flex justify-center ">
+                      {facilities.join(", ")}
+                    </div>
                   </div>
                 </div>
               </div>

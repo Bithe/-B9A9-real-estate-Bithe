@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
@@ -12,7 +11,9 @@ import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ErrorPage from "./components/Error/ErrorPage";
 import EstateDetails from "./components/EstateDetails/EstateDetails";
-import SpecialOffers from "./components/SpecialOffers/SpecialOffers";
+import { HelmetProvider } from "react-helmet-async";
+import TermsOfService from "./components/TermsOfService/TermsOfService";
+import Contact from "./components/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -42,10 +43,18 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/special-offer",
+        path: "/terms-of-service",
         element: (
           <PrivateRoute>
-            <SpecialOffers></SpecialOffers>{" "}
+            <TermsOfService></TermsOfService>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/contact",
+        element: (
+          <PrivateRoute>
+            <Contact></Contact>
           </PrivateRoute>
         ),
       },
@@ -64,7 +73,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthProvider>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
     <ToastContainer></ToastContainer>
   </AuthProvider>
 );

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import SocialLogin from "./SocialLogin";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
@@ -50,7 +51,7 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    const {email, password} = data;
+    const { email, password } = data;
     loginUser(email, password)
       .then((result) => {
         console.log(result.user);
@@ -69,6 +70,10 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Hoas | Login</title>
+      </Helmet>
+
       <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
         <div className="container h-full p-10">
           <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
@@ -80,7 +85,7 @@ const Login = () => {
                       <div className="text-center">
                         <img
                           className="mx-auto w-48"
-                          src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                          src="/public/login.png"
                           alt="logo"
                         />
                         <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
@@ -100,14 +105,11 @@ const Login = () => {
                           <input
                             name="email"
                             type="email"
-                            required
                             className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
                             placeholder="Email address"
                             {...register("email", { required: true })}
                           />
-                          {errors.email && (
-                            <span>this error from react hook</span>
-                          )}
+                          {errors.email && <span>Email </span>}
                         </div>
 
                         <div
@@ -118,7 +120,6 @@ const Login = () => {
                           <input
                             type="password"
                             name="password"
-                            required
                             className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
                             id="exampleFormControlInput22"
                             placeholder="Password"
@@ -128,7 +129,7 @@ const Login = () => {
 
                         <div className="mb-12 pb-1 pt-1 text-center">
                           <button
-                            className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-dark-3 transition duration-150 ease-in-out hover:shadow-dark-2 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:shadow-dark-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                            className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xl font-bold uppercase leading-normal text-white shadow-dark-3 transition duration-150 ease-in-out hover:shadow-dark-2 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:shadow-dark-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                             type="submit"
                             data-twe-ripple-init
                             data-twe-ripple-color="light"
@@ -154,7 +155,7 @@ const Login = () => {
                         <NavLink to="/register">
                           <button
                             type="button"
-                            className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
+                            className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xl font-bold uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-danger-50/50 hover:text-danger-600 focus:border-danger-600 focus:bg-danger-50/50 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-rose-950 dark:focus:bg-rose-950"
                             data-twe-ripple-init
                             data-twe-ripple-color="light"
                           >
@@ -174,14 +175,12 @@ const Login = () => {
                   >
                     <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                       <h4 className="mb-6 text-xl font-semibold">
-                        We are more than just a company
+                        Welcome Back to Our Hoas Housing Portal!<br></br>
+                        Sign in to access your account and manage your housing
+                        preferences seamlessly.
                       </h4>
                       <p className="text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
+                      Keep track of your favorite listings and preferences for quick access. Get Special Offers after login to our site.
                       </p>
                     </div>
                   </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto lg:px-20 lg:py-8">
-      <div className="navbar bg-base-100 sticky z-10">
+      <div className="navbar bg-base-100 sticky z-10 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,37 +43,42 @@ const Navbar = () => {
                 Home
               </NavLink>
 
-                {/* PROTECTIVE ROUTE */}
-            {user && (
-              <div className=" flex flex-col lg: justify-center items-center gap-8">
-                <NavLink
-                  to="/update-profile"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                      : ""
-                  }
-                >
-                  Update Profile
-                </NavLink>
+              {/* PROTECTIVE ROUTE */}
+              {user && (
+                <div className=" flex flex-col lg: justify-center items-center gap-8">
+                  <NavLink
+                    to="/update-profile"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                        : ""
+                    }
+                  >
+                    Update Profile
+                  </NavLink>
 
-                <NavLink
-                  to="/special-offer"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                      : ""
-                  }
-                >
-                  Special offer
-                </NavLink>
-              </div>
-            )}
-
-
-          
-
-          
+                  <NavLink
+                    to="/terms-of-service"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                        : ""
+                    }
+                  >
+                    Terms of Service
+                  </NavLink>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                        : ""
+                    }
+                  >
+                    Contact
+                  </NavLink>
+                </div>
+              )}
             </ul>
           </div>
           <a className=" lg:text-3xl font-bold ">Hoas</a>
@@ -84,8 +89,8 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#db3665] border rounded-lg p-4 font-bold border-[#db3665]"
-                  : ""
+                  ? "text-[#db3665] border rounded-lg p-4 text-2xl font-bold border-[#db3665]"
+                  : "text-xl "
               }
             >
               Home
@@ -98,26 +103,36 @@ const Navbar = () => {
                   to="/update-profile"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                      : ""
+                      ? "text-[#db3665] border rounded-lg p-4 border-[#db3665] text-2xl font-bold"
+                      : "text-xl"
                   }
                 >
                   Update Profile
                 </NavLink>
 
                 <NavLink
-                  to="/special-offer"
+                  to="/terms-of-service"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
-                      : ""
+                      ? "text-[#db3665] border rounded-lg p-4 border-[#db3665] text-2xl font-bold"
+                      : "text-xl"
                   }
                 >
-                  Special offer
+                  Terms of Service
                 </NavLink>
+
+                <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#db3665] border rounded-lg p-4 font-semibold border-[#db3665]"
+                        : ""
+                    }
+                  >
+                    Contact{" "}
+                  </NavLink>
               </div>
             )}
-
           </ul>
         </div>
         <div className="navbar-end lg:gap-8">

@@ -19,6 +19,7 @@ import slide_image_4 from "../../assets/image/slide_image_4.jpg";
 import slide_image_5 from "../../assets/image/slide_image_5.jpg";
 import slide_image_6 from "../../assets/image/slide_image_6.jpg";
 import "./swiperstyle.css";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -38,10 +39,13 @@ const Home = () => {
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
       <div className="container p-6 mx-auto space-y-6 sm:space-y-12  ">
+         <Helmet>
+          <title>Hoas | Home</title>
+         </Helmet>
         {/* BANNER */}
         <div className=" flex bg-[#1313130D] rounded-3xl  ">
           <div className="container slider slider-body ">
-            <h1 className="heading">Flower Gallery</h1>
+            <h1 className="heading">Welcome to Your Hoas Home</h1>
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
