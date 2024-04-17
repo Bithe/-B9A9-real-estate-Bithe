@@ -1,12 +1,15 @@
-# Welcome to Hoas Residential Website
+# Welcome to Hoas Website
+
+
+## My website URL - https://hoas-residential.web.app/
 
 ## Overview
 Welcome to Hoas - your go-to residential website for finding the perfect home, updating your profile, and exploring user profiles.
 
 ## Features
-- **Home**: Explore a wide range of residential properties including single-family homes, apartments, and townhouses.
-- **Update Profile**: Easily update your profile information to ensure your details are always up-to-date.
-- **User Profile**: Discover other users' profiles to connect with like-minded individuals or potential neighbors.
+- **Home**: Explore a wide range of residential properties including single-family homes, apartments, townhouses, Student housing, Senior living communities, Vacation rentals.
+- **Update Profile**: Easily update your profile information to ensure your name and photo are always up-to-date.
+- **User Profile**: Discover your users' profiles on your photo by hover it.
 - **Terms of Service**: Review our terms of service to understand your rights and responsibilities when using our platform.
 - **Firebase Authentication**: Securely authenticate users with Firebase Authentication for a seamless login and registration process.
 
@@ -21,7 +24,7 @@ Welcome to Hoas - your go-to residential website for finding the perfect home, u
 3. Use `npm start` to launch the development server and start exploring the Hoas website.
 
 ## Contributing
-We welcome contributions from the community! Feel free to submit bug reports, feature requests, or even pull requests to help improve the Hoas website for everyone.
+I welcome contributions from the community! Feel free to submit bug reports, feature requests, or even pull requests to help improve the Hoas website for everyone.
 
 ## Site URL
 Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
