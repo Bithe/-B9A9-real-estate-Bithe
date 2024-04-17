@@ -2,13 +2,14 @@
 
 # Welcome to Hoas Website
 
+## Demo
+Check out the live demo of Hoas [here](https://hoas-residential.web.app/).
+
 ## My website URL - https://hoas-residential.web.app/
 
 ## Overview
 Welcome to Hoas - your go-to residential website for finding the perfect home, updating your profile, and exploring user profiles.
 
-## Demo
-Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
 
 ## Features
 - **Home**: Explore a wide range of residential properties including single-family homes, apartments, townhouses, Student housing, Senior living communities, Vacation rentals.
@@ -16,6 +17,9 @@ Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
 - **User Profile**: Discover your users' profiles on your photo by hover it.
 - **Terms of Service**: Review our terms of service to understand your rights and responsibilities when using our platform.
 - **Firebase Authentication**: Securely authenticate users with Firebase Authentication for a seamless login and registration process.
+- **Responsive**: Responsive design for seamless experience across devices.
+- **live site**: https://hoas-residential.web.app/
+
 
 ## Technologies Used
 - **Animated CSS**: Enhance the user experience with captivating animations and transitions throughout the website.
