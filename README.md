@@ -1,13 +1,14 @@
-# Welcome to Hoas Website
+## Hoas
 
+# Welcome to Hoas Website
 
 ## My website URL - https://hoas-residential.web.app/
 
-## Demo
-Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
-
 ## Overview
 Welcome to Hoas - your go-to residential website for finding the perfect home, updating your profile, and exploring user profiles.
+
+## Demo
+Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
 
 ## Features
 - **Home**: Explore a wide range of residential properties including single-family homes, apartments, townhouses, Student housing, Senior living communities, Vacation rentals.
@@ -20,6 +21,7 @@ Welcome to Hoas - your go-to residential website for finding the perfect home, u
 - **Animated CSS**: Enhance the user experience with captivating animations and transitions throughout the website.
 - **Swiper Slider**: Showcase residential properties and other content with an interactive swiper slider for a dynamic browsing experience.
 - **React Hook Form**: Utilize the React Hook Form npm package for efficient and easy-to-manage form handling, including login forms for user authentication.
+
 
 ## Getting Started
 1. Clone this repository to your local machine.
