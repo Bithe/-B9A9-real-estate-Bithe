@@ -1,5 +1,15 @@
 import { Helmet } from "react-helmet-async";
 
+// 
+import intellectual from "../../assets/image/intellectual.png";
+import acceptance from "../../assets/image/acceptance.jpg";
+import userConduct from "../../assets/image/userConduct.jpg";
+import disclaimer from "../../assets/image/disclaimer.png";
+import privacy from "../../assets/image/privacy.png";
+import limitation from "../../assets/image/limitation.png";
+
+
+
 const TermsOfService = () => {
   return (
     <div className="container mx-auto lg:px-20 lg:py-">
@@ -12,7 +22,7 @@ const TermsOfService = () => {
             <div className="mx-auto mb-7 inline-block">
               <img
                 className="w-20 h-20 "
-                src="/intellectual.png"
+                src={intellectual}
                 alt="Intellectual"
               />
             </div>
@@ -35,7 +45,7 @@ const TermsOfService = () => {
             <div className="mx-auto mb-7 inline-block">
             <img
                 className="w-20 h-20 "
-                src="/acceptance.jpg"
+                src={acceptance}
                 alt="acceptance"
               />
             </div>
@@ -56,7 +66,7 @@ const TermsOfService = () => {
           <div className="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
             <div className="mx-auto mb-7 inline-block">
               <img className="w-20 h-20 "
-                src="/userConduct.jpg"
+                src={userConduct}
                 alt="userConduct"></img>
               
             </div>
@@ -79,7 +89,7 @@ const TermsOfService = () => {
             <div className="mx-auto mb-7 inline-block">
             <img
                 className="w-20 h-20 "
-                src="/disclaimer.png"
+                src={disclaimer}
                 alt="disclaimer"
               />
             </div>
@@ -102,7 +112,7 @@ const TermsOfService = () => {
             <div className="mx-auto mb-7 inline-block">
             <img
                 className="w-20 h-20 "
-                src="/privacy.png"
+                src={privacy}
                 alt="privacy"
               />
             </div>
@@ -124,7 +134,7 @@ const TermsOfService = () => {
             <div className="mx-auto mb-7 inline-block">
             <img
                 className="w-20 h-20 "
-                src="/limitation.png"
+                src={limitation}
                 alt="limitation"
               />
              
