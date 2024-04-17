@@ -43,7 +43,7 @@ const TermsOfService = () => {
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                Acceptance of Terms{" "}
+                Acceptance of Terms
               </h3>
               <p className="text-base font-medium text-body-color">
                 By accessing or using our website, you agree to be bound by
@@ -113,7 +113,7 @@ const TermsOfService = () => {
               <p className="text-base font-medium text-body-color">
                 You agree to use our website only for lawful purposes and in a
                 manner that does not infringe upon the rights of others. You
-                must not engage in any conduct that disrupts or interferes with
+                must not engage in any conduct that disrupts with
                 the website.
               </p>
             </div>
