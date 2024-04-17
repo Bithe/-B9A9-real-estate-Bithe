@@ -7,12 +7,19 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 
+
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
   console.log(loginUser);
 
   // FOR ERROR
   const [error, setError] = useState("");
+
+  // FOR SHOW PASSWORD
+  const [showPassword, setShowPassword] = useState(false);
 
   //   NAVIGATION
   const navigate = useNavigate();
@@ -121,19 +128,29 @@ const Login = () => {
                           data-twe-input-wrapper-init
                         >
                           Password:{" "}
-                          <input
-                            type="password"
-                            name="password"
-                            className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
-                            id="exampleFormControlInput22"
-                            placeholder="Password"
-                            {...register("password", { required: true })}
-                          />
-                          {errors.password && (
-                            <span className="text-red-500 font-bold ">
-                              Please give a valid password
+                          <div className="relative">
+                            <input
+                              type={showPassword ? "text" : "password"}
+                              name="password"
+                              className="peer block min-h-[auto] w-full rounded border-2 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear   dark:text-white dark:autofill:shadow-autofill"
+                              id="exampleFormControlInput22"
+                              placeholder="Password"
+                              {...register("password", { required: true })}
+                            />
+                            {/* SHOW PASSWORD ICON */}
+                            <span
+                              className="absolute inset-y-0 right-0 flex px-2 items-center justify-end "
+                              onClick={() => setShowPassword(!showPassword)}
+                            >
+                              {showPassword ? <FaEye /> : <FaEyeSlash />}
                             </span>
-                          )}
+
+                            {errors.password && (
+                              <span className="text-red-500 font-bold ">
+                                Please give a valid password
+                              </span>
+                            )}
+                          </div>
                         </div>
 
                         <div className="mb-12 pb-1 pt-1 text-center">
