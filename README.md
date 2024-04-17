@@ -3,6 +3,9 @@
 
 ## My website URL - https://hoas-residential.web.app/
 
+## Demo
+Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
+
 ## Overview
 Welcome to Hoas - your go-to residential website for finding the perfect home, updating your profile, and exploring user profiles.
 
@@ -26,8 +29,7 @@ Welcome to Hoas - your go-to residential website for finding the perfect home, u
 ## Contributing
 I welcome contributions from the community! Feel free to submit bug reports, feature requests, or even pull requests to help improve the Hoas website for everyone.
 
-## Site URL
-Visit the Hoas Residential Website [here](https://hoas-residential.web.app/).
+
 
 
 
